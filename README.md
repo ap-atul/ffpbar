@@ -21,3 +21,15 @@ bar.display(log=str(""), display_log=True)
 # to get the progress (property)
 prg = bar.progress
 ```
+
+## Installation
+1. Directly install using pip
+```console
+$  pip install git+https://github.com/AP-Atul/ffpbar
+```
+
+2. Clone and install
+```console
+$ git clone https://github.com/AP-Atul/ffpbar.git
+$ python setup.py install
+```
