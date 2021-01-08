@@ -1,20 +1,13 @@
-"""
-Sample use of Progress class
-"""
+""" Example use of Progress class """
 
-import sys
 import subprocess
-from lib.progress import Progress
+import sys
+
+import ffpbar
 
 
 def run(command):
-    """
-    running a FFmpeg command, this is designed for
-    FFmpeg only, so it will work on it only.
-    :param command: list
-    :return: None
-    """
-    progress = Progress()
+    progress = ffpbar.Progress()
     process = subprocess.Popen(command,
                                stdout=subprocess.PIPE,
                                stderr=subprocess.STDOUT,
@@ -23,7 +16,7 @@ def run(command):
 
     # reading the output log line by line and passing to progress
     for out in process.stdout:
-        progress.displayProgress(out.strip(), displayLog=True)
+        progress.display(out.strip(), display_log=False)
 
     code = process.wait()
     if code:
