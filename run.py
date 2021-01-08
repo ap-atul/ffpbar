@@ -14,7 +14,7 @@ def run(command):
                                universal_newlines=True,
                                encoding='utf-8')
 
-    # reading the output log line by line and passing to progress
+    # reading the output log line by line and passing to _percent
     for out in process.stdout:
         progress.display(out.strip(), display_log=False)
 

@@ -17,4 +17,7 @@ bar.display(log=str("ffmpeg log"))
 
 # to display the logs, for debugging
 bar.display(log=str(""), display_log=True)
+
+# to get the progress (property)
+prg = bar.progress
 ```
