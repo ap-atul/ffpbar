@@ -6,7 +6,6 @@ setup(
     author='AP-Atul',
     author_email='atulpatare99@gmail.com',
     packages=['ffpbar/'],
-    scripts=['ffpbar/'],
     url='https://github.com/AP-Atul/ffpbar',
     license='LICENSE',
     description='Progress bar for FFmpeg using tqdm.',
