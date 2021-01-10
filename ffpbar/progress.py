@@ -13,7 +13,6 @@ class Progress:
     def __init__(self):
         """ Initializes the percent bar object """
         self._bar = tqdm(total=100)
-        self._desc = tqdm(position=1, bar_format='{desc}')
         self._parser = Parser()
         self._percent = 0
 
@@ -23,7 +22,6 @@ class Progress:
 
     def display(self, log: str, display_log=False):
         """ Extracts the time and duration from log and update the percent bar"""
-        self._desc.set_description(desc=log[0: 120], refresh=True)
         duration, time = self._parser.extract_time_duration(log)
 
         if time is not None:
