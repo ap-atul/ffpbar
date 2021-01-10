@@ -34,6 +34,10 @@ class Progress:
         elif display_log:
             print(log)
 
+    def complete(self):
+        """ Completes the progress bar """
+        self._bar.update(100)
+
     def __get_progress(self, duration, time):
         """ Returns the percent as percentage from duration and time """
         duration_in_sec = duration.get_time_in_sec()
